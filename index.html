@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Company Brand - Company Slogan</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&amp;subset=cyrillic-ext" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<style type="text/css">
+			html,body{
+				height:100%;
+				font-family: Roboto, sans-serif;
+				/*smooth text*/
+				-webkit-font-smoothing: antialiased;
+    			-moz-osx-font-smoothing: grayscale;
+    			text-rendering: optimizeLegibility;
+    			scroll-behavior: smooth;
+    			-webkit-scroll-behavior: smooth;
+			}
+			h1,h2,h2,h4,h5,h6,.lead{
+				font-family: 'Roboto Slab', serif;
+			}
+			.overlay{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,0.9);
+				opacity: 0.5;
+			}
+			.header{
+				position: relative;
+				background: url(slide1.jpeg) no-repeat center center;
+				background-repeat:no-repeat;
+				-webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  -o-background-size: cover;
+				  background-size: cover;
+				height: 100%;
+			}
+			.footer{
+				background-color: rgb(50,50,50);
+				min-height:50px;
+				padding:56px;
+			}
+			section{
+				padding-top: 56px;
+				padding-bottom: 56px;
+			}
+			@media (max-width: 992px) {
+				.header-content{
+					bottom: 56px;
+				}
+				.bg-transparent{
+					background-color: #343a40!important;
+				}
+				.carousel-item{
+					height:200px;
+				}
+			}
+			@media (min-width: 992px) {
+				.header-content{
+					top: 50%;
+				}
+				.bg-transparent .nav-link{
+					font-size: 1.25rem !important;
+				}
+				.bg-transparent .navbar-brand{
+					font-size: 1.5rem !important;
+				}
+				.bg-transparent .logo{
+					width:36px;
+					height:36px;
+				}
+				.carousel-item{
+					height:500px;
+				}
+			}
+			.header-content{
+			  margin: 0;
+			  position: absolute;
+			  left: 50%;
+			  -ms-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			}
+			.header-footer{
+			  margin: 0;
+			  position: absolute;
+			  bottom: 56px;
+			  left: 50%;
+			  -ms-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			}
+			.vertical-center{
+				margin: 0;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  -ms-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			}
+			.carousel-item{
+				background-repeat: no-repeat;
+				background-attachment: scroll;
+				-webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  -o-background-size: cover;
+				  background-size: cover;
+  				border-radius: 10px;
+			}
+			#slide1{
+				background: url(slide1.jpeg);
+			}
+			#slide2{
+				background: url(slide2.jpeg);
+			}
+			#slide3{
+				background: url(slide3.jpeg);
+			}
+			/*navbar transition*/
+			.transitionable{
+				-webkit-transition: all 0.5s ease-in-out;
+			    -moz-transition: all 0.5s ease-in-out;
+			    -o-transition: all 0.5s ease-in-out;
+			    transition: all 0.5s ease-in-out;
+			}
+			.bg-divider{
+				background-color: rgb(236,236,236);
+			}
+			.bg-divider-dark{
+				background-color: rgb(100,100,100);
+			}
+			.card{
+				box-shadow:0px 0px 1px 1px rgb(225,225,225);
+			}
+			.card:hover{
+				transform: scale(1.1);
+				box-shadow:0px 0px 5px 5px rgb(225,225,225);
+			}
+			.animated{
+  				animation-delay: 0.5s;
+			}
+		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	</head>
+	<body>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark transitionable" id="navbar">
+			<div class="container">
+			  	<a class="navbar-brand mb-0 h1 mr-auto" href="#header">
+			  		<svg class="d-inline-block align-top logo" width=30 height=30 viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg>
+			  		Company Brand
+				</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  		<ul class="navbar-nav ml-auto my-2 my-lg-0">
+		  		  <li class="nav-item">
+			        <a class="nav-link" href="#about-us">About Us</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#services">Services</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#presentation">Presentation</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#statistics">Statistics</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#prices">Prices</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#contacts">Contacts</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</nav>
+		<header class="header text-light" id="header">
+			<div class="overlay"></div>
+			<div class="container header-content">
+		      <div class="row">
+		        <div class="col-lg-8 col-md-10 mx-auto">
+		          <div class="page-heading text-center">
+		            <h1 class="animated zoomIn">Company Brand</h1>
+		            <p class="subheading animated fadeInUp">Attractive company slogan here</p>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="header-footer">
+		    	<a id="scroll-down" href="#about-us" class="btn bg-light" role="button">
+		    		<i class="fas fa-arrow-down"></i>
+		    	</a>
+		    </div>
+		</header>
+		<section id="about-us">
+			<div class="container text-center">
+				<h2>About Us</h2>
+				<p>Brief mission of your company</p>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="lead">Lead 1</p>
+						<p><strong>Lorem</strong> <em>ipsum</em> <u>dolor</u> <mark>sit amet</mark>, <del>consectetur</del> adipiscing <abbr title="Elephant Library Italy Taiwan" class="initialism">ELIT</abbr>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="lead">Lead 2</p>
+						<ul class="list-unstyled">
+						  <li>Lorem ipsum dolor sit amet</li>
+						  <li>Consectetur adipiscing elit</li>
+						  <li>Integer molestie lorem at massa</li>
+						  <li>Facilisis in pretium nisl aliquet</li>
+						  <li>Nulla volutpat aliquam velit
+						    <ul>
+						      <li>Phasellus iaculis neque</li>
+						      <li>Purus sodales ultricies</li>
+						      <li>Vestibulum laoreet porttitor sem</li>
+						      <li>Ac tristique libero volutpat at</li>
+						    </ul>
+						  </li>
+						  <li>Faucibus porta lacus fringilla vel</li>
+						  <li>Aenean sit amet erat nunc</li>
+						  <li>Eget porttitor lorem</li>
+						</ul>
+						<blockquote class="blockquote">
+						  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="bg-divider">
+			<div class="container text-center">
+				<h2>Services</h2>
+				<p>Describe shortly what your company do for people</p>
+			</div>
+			<div class="container text-center">
+				<div class="row text-center">
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fab fa-black-tie fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">Design</h4>
+			        <p class="">Maybe you have products with unique design?</p>
+			      </div>
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fas fa-shipping-fast fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">Delivery</h4>
+			        <p class="">Can ship faster that others</p>
+			      </div>
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">Mobility</h4>
+			        <p class="">Clients can order your goods on the go</p>
+			      </div>
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fas fa-server fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">Technics</h4>
+			        <p class="">Can take all boring staff to yourself</p>
+			      </div>
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fab fa-google fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">SEO optimization</h4>
+			        <p class="">Make website optimized for search engines like Google or Yandex</p>
+			      </div>
+			      <div class="col-md-4">
+			        <span class="fa-stack fa-4x text-dark">
+			          <i class="fas fa-circle fa-stack-2x"></i>
+			          <i class="fas fa-ad fa-stack-1x fa-inverse"></i>
+			        </span>
+			        <h4 class="service-heading">Contextual advertising</h4>
+			        <p class="">Want to be first at search page, will help to set Google Adwords.</p>
+			      </div>
+			    </div>
+			</div>
+		</section>
+		<section id="presentation">
+			<div class="container text-center">
+				<h2>Presentation</h2>
+				<p>Some slider here</p>
+			</div>
+			<div id="carouselExampleCaptions" class="container carousel slide" data-ride="carousel">
+			    <ol class="carousel-indicators">
+			      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+			    </ol>
+			    <div class="carousel-inner">
+			      <div class="carousel-item active" id="slide1">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h5 class="badge badge-dark">First slide label</h5>
+			          <br>
+			          <p class="badge badge-dark">Description for the first slide goes here</p>
+			        </div>
+			      </div>
+			      <div class="carousel-item" id="slide2">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h5 class="badge badge-dark">Second slide label</h5>
+			          <br>
+			          <p class="badge badge-dark">Description for the second slide goes here</p>
+			        </div>
+			      </div>
+			      <div class="carousel-item" id="slide3">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h5 class="badge badge-dark">Third slide label</h5>
+			          <br>
+			          <p class="badge badge-dark">Description for the third slide goes here</p>
+			        </div>
+			      </div>
+			    </div>
+			    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+			      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			      <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+			      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			      <span class="sr-only">Next</span>
+			    </a>
+			</div> 
+		</section>
+		<section id="statistics" class='bg-divider-dark text-light'>
+			<div class="container text-center">
+				<h2>Statistics</h2>
+				<p>Some valuable numbers</p>
+			</div>
+			<div class="container">
+				
+				<div class="row">
+					<div class="col text-center">
+						<span class="fa-stack fa-4x">
+				          	<i class="fas fa-circle fa-stack-2x"></i>
+				          	<h3 class="counter-value vertical-center text-dark">5000+</h3>
+				        </span>
+				        <br><br>
+						<h4>Active Users</h4>
+					</div>
+					<div class="col text-center">
+						<span class="fa-stack fa-4x">
+				        	<i class="fas fa-circle fa-stack-2x"></i>
+							<h3 class="counter-value vertical-center text-dark">150</h3>
+						</span>
+						<br><br>
+						<h4>Total selling</h4>
+					</div>
+					<div class="col text-center">
+						<span class="fa-stack fa-4x">
+				        	<i class="fas fa-circle fa-stack-2x"></i>
+							<h3 class="counter-value vertical-center text-dark">11000</h3>
+						</span>
+						<br><br>
+						<h4>Happy Customers</h4>
+					</div>
+					<div class="col text-center">
+						<span class="fa-stack fa-4x">
+				        	<i class="fas fa-circle fa-stack-2x"></i>
+							<h3 class="counter-value vertical-center text-dark">53210</h3>
+						</span>
+						<br><br>
+						<h4>Cup of coffee</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="prices">
+			<div class="container text-center">
+				<h2>Prices</h2>
+				<p>Purchase plan</p>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card text-center transitionable">
+						  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="40%" y="50%" fill="#dee2e6" dy=".3em">Product 1</text></svg>
+						  <div class="card-body">
+						    <h5 class="card-title">199$</h5>
+						    <p class="card-text">Description</p>
+						    <a href="" class="btn btn-dark">Buy</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card text-center transitionable">
+						  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="40%" y="50%" fill="#dee2e6" dy=".3em">Product 2</text></svg>
+						  <div class="card-body">
+						    <h5 class="card-title">299$</h5>
+						    <p class="card-text">Description</p>
+						    <a href="" class="btn btn-dark">Buy</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card text-center transitionable">
+						  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="40%" y="50%" fill="#dee2e6" dy=".3em">Product 3</text></svg>
+						  <div class="card-body">
+						    <h5 class="card-title">399$</h5>
+						    <p class="card-text">Description</p>
+						    <a href="" class="btn btn-dark">Buy</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card text-center transitionable">
+						  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="40%" y="50%" fill="#dee2e6" dy=".3em">Product 4</text></svg>
+						  <div class="card-body">
+						    <h5 class="card-title">499$</h5>
+						    <p class="card-text">Description</p>
+						    <a href="" class="btn btn-dark">Buy</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contacts">
+			<div class="container text-center">
+				<h2>Let's Get In Touch!</h2>
+				<p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+			</div>
+			<div class="container">
+		      <div class="row">
+		        <div class="col-lg-4 ml-auto text-center">
+		          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+		          <a class="d-block" href="tel:+77081592648">+7 (708) 159-26-48</a>
+		        </div>
+		        <div class="col-lg-4 mr-auto text-center">
+		          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+		          <!-- Make sure to change the email address in anchor text AND the link below! -->
+		          <a class="d-block" href="mailto:arsenanai@gmail.com">arsenanai@gmail.com</a>
+		        </div>
+		      </div>
+		      <br>
+		      <div class="row">
+		      	<div class="col">
+		      		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1250.9370097498281!2d71.41230628398895!3d51.16611193039681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586d9e0936acd%3A0xa7e5595f61629733!2z0prQsNGA0LbRiyDQnNC40L3QuNGB0YLRgNC70ZbQs9GW!5e0!3m2!1skk!2skz!4v1551174999039" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		      	</div>
+		      </div>
+		    </div>
+		</section>
+		<footer class="footer text-light small">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						Site Navigation:
+						<br>
+					    <a class="text-light" href="#about-us">About Us</a>
+					    <br>
+					    <a class="text-light" href="#services">Services</a>
+					    <br>
+				        <a class="text-light" href="#presentation">Presentation</a>
+				        <br>
+				        <a class="text-light" href="#statistics">Statistics</a>
+				        <br>
+				        <a class="text-light" href="#prices">Prices</a>
+				        <br>
+				        <a class="text-light" href="#contacts">Contacts</a>
+					</div>
+					<div class="col">
+						Social links:
+						<br> 
+						<a href="" class="mr-3 text-light">
+							<i class="fab fa-facebook"></i> Facebook
+						</a>
+						<br>
+						<a href="" class="mr-3 text-light">
+							<i class="fab fa-instagram"></i> Instagram
+						</a>
+						<br>
+						<a href="" class="mr-3 text-light">
+							<i class="fab fa-youtube"></i> Youtube
+						</a>
+						<br>
+						<a href="" class="mr-3 text-light">
+							<i class="fab fa-twitter"></i> Twitter
+						</a>
+						<br>
+						<a href="" class="mr-3 text-light">
+							<i class="fab fa-google-plus"></i> Google Plus
+						</a>
+					</div>
+					<div class="col">
+						<a href="" class="text-light">Privacy policy</a><br>
+						<a href="" class="text-light">Terms of use</a><br>
+						Made with <i class="fa fa-heart"></i> & <i class="fa fa-coffee"></i> in Astana, Kazakhstan <br>
+						@Brand Company 2019, All rights reserved
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script async type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="countUp" src="countUp.min.js"></script>
+	    <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	    <script async src="main.js"></script>
+  	</body>
+</html>
