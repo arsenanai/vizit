@@ -1,0 +1,134 @@
+html,body{
+	height:100%;
+	font-family: Roboto, sans-serif;
+	/*smooth text*/
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+	-webkit-scroll-behavior: smooth;
+}
+h1,h2,h2,h4,h5,h6,.lead{
+	font-family: 'Roboto Slab', serif;
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.9);
+	opacity: 0.5;
+}
+.header{
+	position: relative;
+	background: url(slide1.jpeg) no-repeat center center;
+	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	height: 100%;
+}
+.footer{
+	background-color: rgb(50,50,50);
+	min-height:50px;
+	padding:56px;
+}
+section{
+	padding-top: 56px;
+	padding-bottom: 56px;
+}
+@media (max-width: 992px) {
+	.header-content{
+		bottom: 56px;
+	}
+	.bg-transparent{
+		background-color: #343a40!important;
+	}
+	.carousel-item{
+		height:200px;
+	}
+}
+@media (min-width: 992px) {
+	.header-content{
+		top: 50%;
+	}
+	.bg-transparent .nav-link{
+		font-size: 1.25rem !important;
+	}
+	.bg-transparent .navbar-brand{
+		font-size: 1.5rem !important;
+	}
+	.bg-transparent .logo{
+		width:36px;
+		height:36px;
+	}
+	.carousel-item{
+		height:500px;
+	}
+}
+.header-content{
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.header-footer{
+  margin: 0;
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vertical-center{
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.carousel-item{
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		border-radius: 10px;
+}
+#slide1{
+	background: url(slide1.jpeg);
+}
+#slide2{
+	background: url(slide2.jpeg);
+}
+#slide3{
+	background: url(slide3.jpeg);
+}
+/*navbar transition*/
+.transitionable{
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.bg-divider{
+	background-color: rgb(236,236,236);
+}
+.bg-divider-dark{
+	background-color: rgb(100,100,100);
+}
+.card{
+	box-shadow:0px 0px 1px 1px rgb(225,225,225);
+}
+.card:hover{
+	transform: scale(1.1);
+	box-shadow:0px 0px 5px 5px rgb(225,225,225);
+}
+.animated{
+	animation-delay: 0.5s;
+}

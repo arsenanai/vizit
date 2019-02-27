@@ -59,6 +59,8 @@ function smoothScrolling(){
 	    return false;
 	});*/
 }
+//disable right click
+document.oncontextmenu =new Function("return false;")
 //defining variables
 var height = $(window).height();
 var lastId,

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:700" rel="stylesheet">
+	<style type="text/css">
+		#weber-brand-description{
+			font-family: Roboto, sans-serif;
+			font-size: 22px;
+		}
+		#weber-brand-name{
+			font-family: 'Roboto Slab', serif;
+			font-size: 72px;
+		}
+		.logo-text{
+			margin: 0px;
+			font-weight:bold;
+			color:white;
+		}
+		.rect{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			background-color: rgb(234,125,35);
+		}
+		.vertical-center{
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align:center;
+		}
+		.circle{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="rect" 
+		style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+	 	unselectable="on"
+	 	onselectstart="return false;" 
+	 	onmousedown="return false;">
+		<div class="vertical-center">
+			<img src="logo.svg" class="circle">
+			<h1 id="weber-brand-name" class="logo-text"><b>Weber</b></h1>
+			<p id="weber-brand-description" class="logo-text">WEB STUDIO</p>
+		</div>
+	</div>
+	<script language="JavaScript">
+		document.oncontextmenu =new Function("return false;")
+	</script>
+</body>
+</html>
