@@ -25,13 +25,16 @@ h1,h2,h2,h4,h5,h6,.lead,.title{
 }
 .header{
 	position: relative;
-	background: url(slide1.jpeg) no-repeat center center;
-	background-repeat:no-repeat;
-	-webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
 	height: 100%;
+}
+.with-background-image{
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* IE */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main_bg_2.jpg', sizingMethod='scale')";
 }
 .footer{
 	background-color: rgb(50,50,50);
@@ -104,22 +107,8 @@ section{
   transform: translate(-50%, -50%);
 }
 .carousel-item{
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	-webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-		border-radius: 10px;
-}
-#slide1{
-	background: url(slide1.jpeg);
-}
-#slide2{
-	background: url(slide2.jpeg);
-}
-#slide3{
-	background: url(slide3.jpeg);
+	position: relative;
+	border-radius: 10px;
 }
 /*navbar transition*/
 .transitionable{

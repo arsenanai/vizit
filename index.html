@@ -8,9 +8,28 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.png"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="core.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<style type="text/css">
+			.header{
+				/*background: url(building.jpg) no-repeat center center;*/
+				background: url(wallpaper.jpg) no-repeat center center;
+			}
+			#slide1{
+				background: url(slide_1cr.jpg) no-repeat center center;
+			}
+			#slide2{
+				background: url(slide_2.jpg) no-repeat center center;
+			}
+			#slide3{
+				background: url(slide_3.jpg) no-repeat center center;
+			}
+			#slide4{
+				background: url(slide_4.jpg) no-repeat center center;
+			}
+			
+		</style>
 	</head>
 	<body>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark transitionable" id="navbar">
@@ -46,7 +65,7 @@
 			  </div>
 			</div>
 		</nav>
-		<header class="header text-light" id="header">
+		<header class="header text-light with-background-image" id="header">
 			<div class="overlay"></div>
 			<div class="container header-content">
 		      <div class="row">
@@ -165,30 +184,38 @@
 			</div>
 			<div id="carouselExampleCaptions" class="container carousel slide" data-ride="carousel">
 			    <ol class="carousel-indicators">
-			      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-			      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="1" class="active"></li>
 			      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
 			    </ol>
 			    <div class="carousel-inner">
-			      <div class="carousel-item active" id="slide1">
+			      <div class="carousel-item with-background-image active" id="slide1">
 			        <div class="carousel-caption d-none d-md-block">
 			          <h5 class="badge badge-dark">First slide label</h5>
 			          <br>
 			          <p class="badge badge-dark">Description for the first slide goes here</p>
 			        </div>
 			      </div>
-			      <div class="carousel-item" id="slide2">
+			      <div class="carousel-item with-background-image" id="slide2">
 			        <div class="carousel-caption d-none d-md-block">
 			          <h5 class="badge badge-dark">Second slide label</h5>
 			          <br>
 			          <p class="badge badge-dark">Description for the second slide goes here</p>
 			        </div>
 			      </div>
-			      <div class="carousel-item" id="slide3">
+			      <div class="carousel-item with-background-image" id="slide3">
 			        <div class="carousel-caption d-none d-md-block">
 			          <h5 class="badge badge-dark">Third slide label</h5>
 			          <br>
 			          <p class="badge badge-dark">Description for the third slide goes here</p>
+			        </div>
+			      </div>
+			      <div class="carousel-item with-background-image" id="slide4">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h5 class="badge badge-dark">Slide label</h5>
+			          <br>
+			          <p class="badge badge-dark">Description for the slide goes here</p>
 			        </div>
 			      </div>
 			    </div>
