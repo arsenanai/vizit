@@ -2,26 +2,61 @@
 <html>
 <head>
 	<title></title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Mono:700|Roboto+Slab:700|Roboto:700" rel="stylesheet">
 	<style type="text/css">
-		#weber-brand-description{
+		.roboto{
 			font-family: Roboto, sans-serif;
+		}
+		.roboto-slab{
+			font-family: 'Roboto Slab', serif;
+		}
+		.roboto-mono{
+			font-family: 'Roboto Mono', monospace;
+		}
+		.roboto-condensed{
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+		.font-72{
+			font-size: 72px;
+		}
+		.font-22{
 			font-size: 22px;
 		}
-		#weber-brand-name{
-			font-family: 'Roboto Slab', serif;
-			font-size: 72px;
+		.font-33{
+			font-size: 33px;
 		}
 		.logo-text{
 			margin: 0px;
 			font-weight:bold;
-			color:white;
 		}
 		.rect{
-			position: absolute;
+			position: relative;
+		}
+		.text-light{
+			color: white;
+			/*text-shadow: 0px 0px 1px white;*/
+		}
+		.text-dark{
+			color: #424242;
+			/*text-shadow: 0px 0px 1px black;*/
+		}
+		.bg-light{
+			background-color: white;
+		}
+		.bg-dark{
+			background-color: #607D8B;
+		}
+		.r-100{
+			width: 100px;
+			height: 100px;
+		}
+		.r-500{
 			width: 500px;
 			height: 500px;
-			background-color: rgb(234,125,35);
+		}
+		.r-1000{
+			width: 1000px;
+			height: 1000px;
 		}
 		.vertical-center{
 			margin: 0;
@@ -32,25 +67,107 @@
 			transform: translate(-50%, -50%);
 			text-align:center;
 		}
-		.circle{
-			width: 100px;
+		.bottom{
+			vertical-align:bottom;
 		}
+		.unselectable{
+			user-select:none;
+			-moz-user-select: none; 
+			-webkit-user-select: none; 
+			-ms-user-select:none; 
+			-o-user-select:none;
+		}
+		.green{
+			color: #34a853;
+		}
+		.yellow{
+			color: #fbbc05;
+		}
+		.blue{
+			color: #4286f4;
+		}
+		.red{
+			color: #ea4335;
+		}
+		
 	</style>
 </head>
 <body>
-	<div class="rect" 
-		style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
-	 	unselectable="on"
-	 	onselectstart="return false;" 
-	 	onmousedown="return false;">
-		<div class="vertical-center">
-			<img src="logo.svg" class="circle">
-			<h1 id="weber-brand-name" class="logo-text"><b>Weber</b></h1>
-			<p id="weber-brand-description" class="logo-text">WEB STUDIO</p>
-		</div>
-	</div>
+	<!-- logo #1-->
+	<table>
+		<tr>
+			<td>
+				<div class="rect bg-dark text-light r-500 unselectable">
+					<div class="vertical-center">
+						<img src="global-colorful-dark.svg" class="r-100">
+						<h1 class="logo-text roboto-slab font-72">
+							Weber
+						</h1>
+						<p class="logo-text roboto font-22">WEB STUDIO</p>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="rect bg-light text-dark r-500 unselectable">
+					<div class="vertical-center">
+						<img src="global-colorful-light.svg" class="r-100">
+						<h1 class="logo-text roboto-slab font-72">
+							<span class="green">W</span><span class="yellow">e</span><span class="blue">b</span><span class="yellow">e</span><span class="red">r</span>
+						</h1>
+						<p class="logo-text roboto font-22">WEB STUDIO</p>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<div class="rect bg-dark text-light r-500 unselectable">
+					<div class="vertical-center">
+						<table class="bottom">
+							<tr>
+								<td class="bottom" rowspan=2><img src="global-colorful-dark.svg" class="r-100"></td>
+								<td class="logo-text roboto-slab font-72 bottom" style="line-height: 80%;">Weber</td>
+							</tr>
+							<tr>
+								<td class="logo-text roboto font-22">WEB STUDIO</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="rect bg-light text-dark r-500 unselectable">
+					<div class="vertical-center">
+						<table class="bottom">
+							<tr>
+								<td class="bottom" rowspan=2><img src="global-colorful-light.svg" class="r-100"></td>
+								<td class="logo-text roboto-slab font-72 bottom" style="line-height: 80%;">
+									<span class="green">W</span><span class="yellow">e</span><span class="blue">b</span><span class="yellow">e</span><span class="red">r</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="logo-text roboto font-22">WEB STUDIO</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<img src="global-colorful-light.svg" class="r-500">
+			</td>
+			<td class="bg-dark">
+				<img src="global-colorful-dark.svg" class="r-500">
+			</td>
+		</tr>
+	</table>
 	<script language="JavaScript">
-		document.oncontextmenu =new Function("return false;")
+		//document.oncontextmenu =new Function("return false;")
 	</script>
 </body>
 </html>

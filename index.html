@@ -4,17 +4,19 @@
 		<title>Company Brand - Company Slogan</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta content="favicon.png" itemprop="image">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.png"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&amp;subset=cyrillic-ext" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	</head>
 	<body>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark transitionable" id="navbar">
 			<div class="container">
-			  	<a class="navbar-brand mb-0 h1 mr-auto" href="#header">
-			  		<svg class="d-inline-block align-top logo" width=30 height=30 viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg>
+			  	<a class="navbar-brand mb-0 h1 mr-auto bold" href="#header">
+			  		<img id="main-logo" src="global-colorful-dark.svg" width=26>
 			  		Company Brand
 				</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,15 +59,15 @@
 		      </div>
 		    </div>
 		    <div class="header-footer">
-		    	<a id="scroll-down" href="#about-us" class="btn bg-light" role="button">
-		    		<i class="fas fa-arrow-down"></i>
+		    	<a id="scroll-down" href="#about-us" class="">
+		    		<i class="ico-mouse-white"></i>
 		    	</a>
 		    </div>
 		</header>
 		<section id="about-us">
 			<div class="container text-center">
 				<h2>About Us</h2>
-				<p>Brief mission of your company</p>
+				<p>The brief mission of your company</p>
 			</div>
 			<div class="container">
 				<div class="row">
@@ -111,7 +113,7 @@
 			          <i class="fab fa-black-tie fa-stack-1x fa-inverse"></i>
 			        </span>
 			        <h4 class="service-heading">Design</h4>
-			        <p class="">Maybe you have products with unique design?</p>
+			        <p class="">Maybe you have products with a unique design?</p>
 			      </div>
 			      <div class="col-md-4">
 			        <span class="fa-stack fa-4x text-dark">
@@ -119,7 +121,7 @@
 			          <i class="fas fa-shipping-fast fa-stack-1x fa-inverse"></i>
 			        </span>
 			        <h4 class="service-heading">Delivery</h4>
-			        <p class="">Can ship faster that others</p>
+			        <p class="">Can ship faster than others</p>
 			      </div>
 			      <div class="col-md-4">
 			        <span class="fa-stack fa-4x text-dark">
@@ -151,7 +153,7 @@
 			          <i class="fas fa-ad fa-stack-1x fa-inverse"></i>
 			        </span>
 			        <h4 class="service-heading">Contextual advertising</h4>
-			        <p class="">Want to be first at search page, will help to set Google Adwords.</p>
+			        <p class="">Want to be first at the search page, will help to set Google Adwords</p>
 			      </div>
 			    </div>
 			</div>
@@ -211,7 +213,8 @@
 					<div class="col text-center">
 						<span class="fa-stack fa-4x">
 				          	<i class="fas fa-circle fa-stack-2x"></i>
-				          	<h3 class="counter-value vertical-center text-dark">5000+</h3>
+				          	<h3 class="counter-value vertical-center text-dark" id="counter1" 
+				          	data-start="4990" data-end="5005" data-duration="75000" data-prepend="+">4990+</h3>
 				        </span>
 				        <br><br>
 						<h4>Active Users</h4>
@@ -219,7 +222,8 @@
 					<div class="col text-center">
 						<span class="fa-stack fa-4x">
 				        	<i class="fas fa-circle fa-stack-2x"></i>
-							<h3 class="counter-value vertical-center text-dark">150</h3>
+							<h3 class="counter-value vertical-center text-dark" id="counter2" 
+							data-start="0" data-end="499" data-duration="750">500</h3>
 						</span>
 						<br><br>
 						<h4>Total selling</h4>
@@ -227,7 +231,8 @@
 					<div class="col text-center">
 						<span class="fa-stack fa-4x">
 				        	<i class="fas fa-circle fa-stack-2x"></i>
-							<h3 class="counter-value vertical-center text-dark">11000</h3>
+							<h3 class="counter-value vertical-center text-dark" id="counter3" 
+							data-start="0" data-end="11000" data-duration="750">11000</h3>
 						</span>
 						<br><br>
 						<h4>Happy Customers</h4>
@@ -235,10 +240,11 @@
 					<div class="col text-center">
 						<span class="fa-stack fa-4x">
 				        	<i class="fas fa-circle fa-stack-2x"></i>
-							<h3 class="counter-value vertical-center text-dark">53210</h3>
+							<h3 class="counter-value vertical-center text-dark" id="counter4" 
+							data-start="0" data-end="53210" data-duration="750">53210</h3>
 						</span>
 						<br><br>
-						<h4>Cup of coffee</h4>
+						<h4>Cups of coffee</h4>
 					</div>
 				</div>
 			</div>
@@ -302,12 +308,12 @@
 		      <div class="row">
 		        <div class="col-lg-4 ml-auto text-center">
 		          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-		          <a class="d-block" href="tel:+77081592648">+7 (708) 159-26-48</a>
+		          <a class="d-block" href="tel:+77771234567">+7 (777) 123-45-67</a>
 		        </div>
 		        <div class="col-lg-4 mr-auto text-center">
 		          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
 		          <!-- Make sure to change the email address in anchor text AND the link below! -->
-		          <a class="d-block" href="mailto:arsenanai@gmail.com">arsenanai@gmail.com</a>
+		          <a class="d-block" href="mailto:yourcompanymail@domain.com">yourcompanymail@domain.com</a>
 		        </div>
 		      </div>
 		      <br>
@@ -318,11 +324,20 @@
 		      </div>
 		    </div>
 		</section>
-		<footer class="footer text-light small">
+		<div class="alert alert-light alert-dismissible" id="contactUs" role="alert">
+			<a class="btn bg-light text-dark" role="button" href="https://t.me/arsen_astana" target="_blank">
+				<i class="fab fa-telegram fa-3x"></i>
+			</a>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true" class="times">&times;</span>
+			</button>
+		</div>
+		
+		<footer class="footer text-light">
 			<div class="container">
 				<div class="row">
-					<div class="col">
-						Site Navigation:
+					<div class="col-md-4 padding-39">
+						<span class="text-muted">Site Navigation</span>
 						<br>
 					    <a class="text-light" href="#about-us">About Us</a>
 					    <br>
@@ -336,40 +351,88 @@
 				        <br>
 				        <a class="text-light" href="#contacts">Contacts</a>
 					</div>
-					<div class="col">
-						Social links:
-						<br> 
-						<a href="" class="mr-3 text-light">
-							<i class="fab fa-facebook"></i> Facebook
-						</a>
-						<br>
-						<a href="" class="mr-3 text-light">
-							<i class="fab fa-instagram"></i> Instagram
-						</a>
-						<br>
-						<a href="" class="mr-3 text-light">
-							<i class="fab fa-youtube"></i> Youtube
-						</a>
-						<br>
-						<a href="" class="mr-3 text-light">
-							<i class="fab fa-twitter"></i> Twitter
-						</a>
-						<br>
-						<a href="" class="mr-3 text-light">
-							<i class="fab fa-google-plus"></i> Google Plus
-						</a>
+					<div class="col-md-4">
+						<table>
+							<tr>
+								<td class="width-23"></td>
+								<td>
+									<span class="text-muted footer-title">Social links</span>
+								</td>
+							</tr>
+							<tr class="social-link">
+								<td>
+									<span class="social-icon">
+										<i class="width-20 fab fa-facebook"></i>
+									</span>
+								</td>
+								<td>
+									<a href="" class="text-light">
+										<span>Facebook</span>
+									</a>
+								</td>
+							</tr>
+							<tr class="social-link">
+								<td>
+									<span class="social-icon">
+										<i class="width-20 fab fa-instagram"></i>
+									</span>
+								</td>
+								<td>
+									<a href="" class="text-light">
+										<span>Instagram</span>
+									</a>
+								</td>
+							</tr>
+							<tr class="social-link">
+								<td>
+									<span class="social-icon">
+										<i class="width-20 fab fa-youtube"></i>
+									</span>
+								</td>
+								<td>
+									<a href="" class="text-light">
+										<span>Youtube</span>
+									</a>
+								</td>
+							</tr>
+							<tr class="social-link">
+								<td>
+									<span class="social-icon">
+										<i class="width-20 fab fa-twitter"></i>
+									</span>
+								</td>
+								<td>
+									<a href="" class="text-light">
+										<span>Twitter</span>
+									</a>
+								</td>
+							</tr>
+							<tr class="social-link">
+								<td>
+									<span class="social-icon">
+										<i class="width-20 fab fa-google-plus"></i>
+									</span>
+								</td>
+								<td>
+									<a href="" class="text-light">
+										<span>Google Plus</span>
+									</a>
+								</td>
+							</tr>
+						</table>
 					</div>
-					<div class="col">
+					<div class="col-md-4 padding-39">
+						<span class="text-muted">Copyright info</span>
+						<br>
 						<a href="" class="text-light">Privacy policy</a><br>
 						<a href="" class="text-light">Terms of use</a><br>
-						Made with <i class="fa fa-heart"></i> & <i class="fa fa-coffee"></i> in Astana, Kazakhstan <br>
+						Made with <i class="fa fa-heart animated heartBeat infinite"></i> & <i class="fa fa-coffee"></i> in Astana, Kazakhstan <br>
 						@Brand Company 2019, All rights reserved
 					</div>
 				</div>
 			</div>
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script async type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="countUp" src="countUp.min.js"></script>
 	    <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	    <script async src="main.js"></script>

@@ -3,9 +3,11 @@ function changeNavbar(scrollPos,height){
 	if(scrollPos >= height-50 && height>=400) {
     	$(".navbar").removeClass('navbar-dark bg-transparent bg-dark');
         $(".navbar").addClass('navbar-light bg-light');
+        $("#main-logo").attr('src','global-colorful-light.svg');
     } else if(height>=400)  {
     	$(".navbar").removeClass('navbar-light bg-light');
     	$(".navbar").addClass('navbar-dark bg-transparent');
+    	$("#main-logo").attr('src','global-colorful-dark.svg');
     }
 }
 function decideNavbarMode(){
@@ -33,34 +35,55 @@ function changeActivMenu(lastId, topMenuHeight, menuItems, scrollItems){
 }
 function countNumbers(){
 	try{
-		var oTop = $('#statistics').offset().top - window.innerHeight;
-		if (a == 0 && $(window).scrollTop() > oTop) {
-			var element =  document.querySelectorAll('.counter-value');
-			var elem;
-			for(elem in element)
-				elem.classList.add('animated', 'bounceIn');
-			a = 1;
+		if (!window.matchMedia('(prefers-reduced-motion)')) {
+			var oTop = $('#statistics').offset().top - window.innerHeight;
+			if (a == 0 && $(window).scrollTop() > oTop) {
+				let els = document.querySelectorAll('.counter-value');
+				//let el = document.getElementById('counter1');
+				els.forEach(function(el) {
+				  animateValue(
+				  	el.id, 
+				  	parseInt(el.getAttribute('data-start')),
+				  	parseInt(el.getAttribute('data-end')),
+				  	parseInt(el.getAttribute('data-duration')),
+				  	el.getAttribute('data-prepend')
+				  );
+				  a=1;
+				});
+			}
 		}
 	}catch(err){
 		console.log(err);
 	}
 }
 function smoothScrolling(){
-	/*$("a.nav-link, #scroll-down, a.navbar-brand").on('click', function(event) {
-	    if (this.hash !== "") {
-	      event.preventDefault();
-	      var hash = this.hash;
-	      $('html , body').stop().animate({
-	        scrollTop: $(hash).offset().top
-	      }, 500, function(){
-	        window.location.hash = hash;
-	      });
+	$("a.nav-link, #scroll-down, a.navbar-brand").on('click', function(event) {
+	    if (!window.matchMedia('(prefers-reduced-motion)')) {
+	    	
 	    }
-	    return false;
-	});*/
+	});
 }
-//disable right click
-document.oncontextmenu =new Function("return false;")
+function animateValue(id, start, end, duration, prepend = '') {
+    var range = end - start;
+    var current = start;
+    if(duration-range>1000){
+    	var stepTime = Math.ceil(duration/range);
+    	var increment = 1;
+    }else{
+    	var stepTime = 10;
+    	var increment = Math.floor(range/(duration/stepTime));
+    }
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        if (current >= end) {
+            clearInterval(timer);
+            obj.innerHTML = end;
+        }else{
+        	obj.innerHTML = current+prepend;
+        }
+    }, stepTime);
+}
 //defining variables
 var height = $(window).height();
 var lastId,
@@ -94,6 +117,7 @@ $(document).ready(function(){
         scrollPos = $(this).scrollTop();
         changeNavbar(scrollPos, height);
 		changeActivMenu(lastId, topMenuHeight, menuItems, scrollItems);
+		countNumbers();
     });
     //smooth scrolling
     smoothScrolling();
