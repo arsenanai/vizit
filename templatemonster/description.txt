@@ -1,0 +1,23 @@
+Template for business website
+It has features like:
+automatic switching navbar
+responsive design
+usage of varios typography technics
+fullsize background image
+presentation slider
+number counting effect
+text animations
+interactive cards
+google map embedding example
+
+It has quick links for:
+phone
+mail
+whatsapp
+telegram
+
+Included:
+html source file
+css styles file
+javascript file
+svg, jpeg and png images
